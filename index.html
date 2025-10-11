@@ -31,7 +31,7 @@
                 font-size: 2.4rem;
                 max-width: 70ch;
                 text-align: center;
-                margin: 1rem auto;
+                margin: 1.5rem auto;
             }
 
             p {
@@ -41,6 +41,39 @@
                 max-width: 70ch;
                 text-align: center;
                 margin: 0 auto; /* Still a bit confusing, but this should help center? */
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                height: 100%;
+                width: 200px;
+                background-color: black;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+                padding: 12px;
+                display: block;
+                width: 100%;
+                text-align: center;
+                transition: background 0.3s;
+            }
+
+            nav a:hover {
+                background-color: #333;
+            }
+
+            .content {
+                margin-right: 200px;
+                padding: 20px;
             }
         </style>
     </head>
@@ -62,6 +95,14 @@
             from the pain of loss. If you've ever moved frequently as a child or had your childhood uprooted, 
             you know all too well the themes this story will be tackling...
         </p>
+
+        <h1 class="header-glow-SNC"> LINKS </h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
     </body>
 </html>
 
