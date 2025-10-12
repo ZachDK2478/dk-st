@@ -121,6 +121,19 @@
                 padding: 5px 10px;
             }
 
+            #home-butt {
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 1100;
+                background: black;
+                color: white;
+                border: none;
+                font-size: 2rem;
+                cursor: pointer;
+                padding: 5px 10px;
+            }
+
             @media (max-width: 768px) {
                 nav.active ~ .content {
                     margin-left: 0;  /* content stays put */
@@ -133,6 +146,7 @@
     <body>
 
         <button type="button" id="nav-toggle">☰</button>
+        <button type="button" id="home-butt">🏠︎</button>
 
         <nav>
             <a href="characters/cream.html">Cream</a>
