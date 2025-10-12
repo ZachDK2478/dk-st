@@ -111,6 +111,7 @@
                 z-index: 9999;
                 width: 175px;
                 height: 75px;
+                transition: transform 0.25s;
             }
 
             .spoiler-text {
@@ -122,9 +123,8 @@
                 filter: blur(0);
             }
             
-            #spoiler-btn:hover {
+            #spoiler-button:hover {
                 transform: scale(1.1);
-                transition: transform 0.2s;
             }
             
             /* ===== Back Button ===== */
@@ -139,6 +139,11 @@
                 font-size: 2rem;
                 cursor: pointer;
                 padding: 5px 10px;
+                transition: transform 0.25s;
+            }
+
+            #back-button:hover {
+                transform: scale(1.1);
             }
             
             /* ===== Desktop defaults ===== */
