@@ -155,11 +155,18 @@
                     justify-content: space-between;
                     align-items: center;
                     padding: 0 15px;
-                    z-index: 1000;
+                    z-index: 1100;
                 }
 
+                /* Make sure main content isn’t covered */
                 body {
                     padding-top: 60px;
+                }
+
+                /* Inside the bar — don’t fix individually */
+                #back-button, #spoiler-button {
+                    position: static;
+                    z-index: auto;
                 }
 
                 #back-button {
@@ -167,11 +174,13 @@
                     border: none;
                     color: white;
                     font-size: 1.5rem;
+                    cursor: pointer;
                 }
 
                 #spoiler-button {
                     width: 32px;
                     height: 32px;
+                    cursor: pointer;
                 }
             }
 
@@ -180,7 +189,11 @@
                 display: none;
             }
 
-
+            /* ===== Desktop defaults ===== */
+            #back-button, #spoiler-button {
+                position: fixed;
+                z-index: 9999;
+            }
         </style>
     </head>
     <body>
