@@ -7,11 +7,13 @@
         <title> Cream the Rabbit </title>
 
         <style>
+            /* ===== @ Rules ===== */
             @font-face {
                 font-family: "determination";
                 src: url('../assets/fonts/determination.otf') format('opentype');
             }
 
+            /* ===== Class Styles ===== */
             .image-container {
                 display: flex;
             }
@@ -21,6 +23,7 @@
                 letter-spacing: 1.2px;
             }
 
+            /* ===== Type Selectors ===== */
             body {
                 text-align: center;
                 background-color: black;
@@ -44,11 +47,48 @@
                 margin: 0 auto; /* Still a bit confusing, but this should help center? */
             }
 
+            /* ===== Link Styles ===== */
             a {
                 text-decoration: none;
                 color: red;
             }
 
+            .link-cream {
+                color: #FFE8BA;
+                text-shadow: 0px 0px 5px #FFE8BA;
+            }
+
+            .link-classie {
+                color: #2598FE;
+                text-shadow: 0px 0px 5px #2598FE;
+            }
+
+            .link-shadow {
+                color: red;
+                text-shadow: 0px 0px 5px red;
+            }
+
+            .link-egg {
+                color: red;
+                text-shadow: 0px 0px 5px red;
+            }
+
+            .link-honey {
+                color: #FAED22;
+                text-shadow: 0px 0px 5px #FAED22;
+            }
+
+            .link-sonic {
+                color: rgb(95, 95, 219);
+                text-shadow: 0px 0px 5px rgb(95, 95, 219);
+            }
+
+            .color-GUN {
+                color: red;
+                text-shadow: 0px 0px 5px red;
+            }
+
+            /* ===== Character Images ===== */
             #character-image {
                 display: block;
                 margin: auto;
@@ -57,9 +97,41 @@
                 max-height: 400px;
                 padding: 15px 0;
             }
+
+            /* ===== Spoiler Styles ===== */
+            #spoiler-button {
+                position: fixed;
+                top: 1rem;
+                right: 0.3rem;
+                padding: 8px 16px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                z-index: 9999;
+                width: 175px;
+                height: 75px;
+            }
+
+            .spoiler-text {
+                filter: blur(6px);
+                transition: filter 0.3s;
+            }
+
+            .spoiler-text.revealed {
+                filter: blur(0);
+            }
+
+            #spoiler-btn:hover {
+                transform: scale(1.1);
+                transition: transform 0.2s;
+            }
         </style>
     </head>
     <body>
+
+        <img id="spoiler-button" src="assets/images/sys/spoiler-checked.png" alt="Spoiler Toggle">
+
         <img id="character-image" src="assets/images/cream-dreamteam_render.png" title="Placeholder DK!Cream Image">
         <p> DISCLAIMER: This image is a placeholder. <br><br> </p>
         
@@ -77,21 +149,24 @@
         <p>
             * Cream is the protagonist of DK!SONICTALE.
             <br>
-            * Cream is six years old during the events of this story.. She has not experienced the six year time skip that the 
+            * Cream is six years old during the events of this story. She has not experienced the six year time skip that the 
             rest of the world has.
             <br>
             * Due to the nature of DETERMINATION, Cream will have different routes she can take. Pacifist, Neutral, and Genocide 
             (No Mercy).
             <br>
-            * In DK!SONICTALE, Cream represents escapism and how it can be okay in moderation (Pacifist), but can be harmful to yourself 
-            and others if taken too far (Genocide/No Mercy).
+            * <span class="spoiler-text">In DK!SONICTALE, Cream represents escapism and how it can be okay in moderation (Pacifist), but can be harmful to yourself 
+            and others if taken too far (Genocide/No Mercy).</span>
             <br>
-            * The Genocide/No Mercy runs in this AU will take the "all just a game" perspective and turn it into the central idea 
-            of Cream's point of view.
+            * <span class="spoiler-text">The Genocide/No Mercy runs in this AU will take the "all just a game" perspective and turn it into the central idea 
+            of Cream's point of view.</span>
             <br>
-            * One of Cream's themes will likely use the freedom leitmotif from DELTARUNE. In fact, it'll probably be used a bit in 
-            this AU's soundtrack to symbolize how much every Mobian longs for freedom from the UNDERGROUND.
+            * <span class="spoiler-text">One of Cream's themes will likely use the freedom leitmotif from DELTARUNE. In fact, it'll probably be used a bit in 
+            this AU's soundtrack to symbolize how much every Mobian longs for freedom from the UNDERGROUND.</span>
             <br><br><br><br><br>
         </p>
+
+        <script src="../assets/javascript/spoiler-togglescript.js"></script>
+
     </body>
 </html>
