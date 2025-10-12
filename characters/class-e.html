@@ -7,11 +7,13 @@
         <title> Class "E" </title>
 
         <style>
+            /* ===== @ Rules ===== */
             @font-face {
                 font-family: "determination";
                 src: url('../assets/fonts/determination.otf') format('opentype');
             }
 
+            /* ===== Class Styles ===== */
             .image-container {
                 display: flex;
             }
@@ -21,6 +23,16 @@
                 letter-spacing: 0.3rem;
             }
 
+            .chaos-emeralds {
+                color: limegreen;
+                text-shadow: 0px 0px 3px limegreen;
+            }
+
+            .fatal-error {
+                color: red;
+            }
+
+            /* ===== Type Selectors ===== */
             body {
                 text-align: center;
                 background-color: black;
@@ -49,6 +61,47 @@
                 color: red;
             }
 
+            /* ===== Link Styles ===== */
+            a {
+                text-decoration: none;
+            }
+
+            .link-cream {
+                color: #FFE8BA;
+                text-shadow: 0px 0px 5px #FFE8BA;
+            }
+
+            .link-classie {
+                color: #2598FE;
+                text-shadow: 0px 0px 5px #2598FE;
+            }
+
+            .link-shadow {
+                color: red;
+                text-shadow: 0px 0px 5px red;
+            }
+
+            .link-egg {
+                color: red;
+                text-shadow: 0px 0px 5px red;
+            }
+
+            .link-honey {
+                color: #FAED22;
+                text-shadow: 0px 0px 5px #FAED22;
+            }
+
+            .link-sonic {
+                color: rgb(95, 95, 219);
+                text-shadow: 0px 0px 5px rgb(95, 95, 219);
+            }
+
+            .color-GUN {
+                color: red;
+                text-shadow: 0px 0px 5px red;
+            }
+
+            /* ===== Character Images ===== */
             #character-image {
                 display: block;
                 margin: auto;
@@ -58,25 +111,121 @@
                 padding: 15px 0;
             }
 
-            #eggman-link {
-                color: red;
+            /* ===== Spoiler Styles ===== */
+            #spoiler-button {
+                position: fixed;
+                top: 1rem;
+                right: 0.3rem;
+                padding: 8px 16px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                z-index: 9999;
+                width: 175px;
+                height: 75px;
             }
 
-            #sonic-link {
-                color: blue;
+            .spoiler-text {
+                filter: blur(6px);
+                transition: filter 0.3s;
+            }
+            
+            .spoiler-text.revealed {
+                filter: blur(0);
+            }
+            
+            #spoiler-btn:hover {
+                transform: scale(1.1);
+                transition: transform 0.2s;
+            }
+            
+            /* ===== Back Button ===== */
+            #back-button {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 1100;
+                background: black;
+                color: white;
+                border: none;
+                font-size: 2rem;
+                cursor: pointer;
+                padding: 5px 10px;
+            }
+            
+            /* ===== Desktop defaults ===== */
+            #back-button, #spoiler-button {
+                position: fixed;
+                z-index: 9999;
+            }
+
+            /* ===== Black Bar ===== */
+            #mobile-bar {
+                display: none;
+            }
+
+            /* ===== Mobile Responsiveness ===== */
+            @media (max-width: 768px) {
+                #mobile-bar {
+                    display: flex;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 75px;
+                    background-color: black;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 15px;
+                    z-index: 1100;
+                }
+
+                body {
+                    padding-top: 60px;
+                }
+
+                #back-button, #spoiler-button {
+                    position: fixed;
+                    z-index: 9999;
+                }
+
+                #back-button {
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    top: 10px;
+                    left: 5px;
+                }
+
+                #spoiler-button {
+                    width: 135px;
+                    height: auto;
+                    cursor: pointer;
+                    top: 1px;
+                    right: 10px;
+                }
             }
         </style>
     </head>
     <body>
+
+        <button type="button" id="back-button" onclick="window.location.href='../characters.html'">←</button>
+        <img id="spoiler-button" src="assets/images/sys/spoiler-checked.png" alt="Spoiler Toggle">
+
+        <div id="mobile-bar"></div>
+
         <img id="character-image" src="assets/images/class-e-render.png" title="Placeholder DK!Classie Image">
         <p> DISCLAIMER: This image is a placeholder. <br><br> </p>
         
         <h1 class="header-glow-CLE"> ARTIFICIAL LIFEFORM — Class "E" </h1>
         <p>
-            Class "E" (also known as "Classie") is an artificial lifeform created by <a id="eggman-link" href="../characters/eggman.html">Dr. Ivo 
+            <span class="spoiler-text">Class "E" (also known as "Classie") is an artificial lifeform created by <a class="link-egg" href="../characters/eggman.html">Dr. Ivo 
             "Eggman" Robotnik</a> for the purpose of finding a way out of the UNDERGROUND. Unfortunately for Eggman, using samples 
             of Sonic's DETERMINATION to create an unfeeling artificial hedgehog didn't exactly work out, and now we have a 
-            genocidal Classic Sonic walking around, toying with lives and playing god until the day Cream returns.
+            genocidal Classic Sonic walking around, toying with lives and playing god until the day Cream returns.</span>
             <br><br>
             Unfinished.
             <br><br>
@@ -84,13 +233,18 @@
 
         <h1 class="header-glow-CLE"> SHORTER INFO </h1>
         <p>
-            * The nickname "Classie" was given to him by <a id="sonic-link" href="../characters/sonic.html">Sonic</a>, and Classie actually 
-            preferred it. He thought it made him sound "classy."
+            * <span class="spoiler-text">The nickname "Classie" was given to him by <a class="link-sonic" href="../characters/sonic.html">Sonic</a>, and 
+            Classie actually preferred it. He thought it made him sound "classy."</span>
             <br>
-            * Classie is not mute. He can speak, but only does so when he feels like he has something to say.
+            * <span class="spoiler-text">Classie is not mute. He can speak, but only does so when he feels like he has 
+            something to say.</span>
             <br>
-            * Upon meeting Cream, Classie pretended to be mute to toy with her and see what she would do. After all, he knows 
-            she has more DETERMINATION than him.
+            * <span class="spoiler-text">Upon meeting Cream, Classie pretended to be mute to toy with her and see what she 
+            would do. After all, he knows she has more DETERMINATION than him.</span>
+            <br>
+            <span class="spoiler-text">* Upon gathering the <span class="chaos-emeralds">CHAOS EMERALDS,</span> Classie grows self-aware about all of the 
+            repetitive nostalgia pandering in the Sonic community. He realizes that he is just another part of it, and thus 
+            deletes all of reailty itself. <span class="fatal-error">FATAL ERROR: DK!SONICTALE.exe not found</span></span>
             <br><br><br><br><br>
         </p>
     </body>
