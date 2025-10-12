@@ -121,26 +121,23 @@
                 padding: 5px 10px;
             }
 
-            #home-butt {
-                position: fixed;
-                top: 10px;
-                right: 10px;
-                z-index: 1100;
-                background: black;
-                color: white;
+            #home-button {
+                background: none;
                 border: none;
-                font-size: 2rem;
                 cursor: pointer;
-                padding: 5px 10px;
+                top: 5px;
+                right: 5px;
+                padding: 5px;
+                align-items: center;
+                justify-content: center;
             }
-
-            #home-butt svg {
+            #home-button svg {
                 display: block;
             }
 
             @media (max-width: 768px) {
                 nav.active ~ .content {
-                    margin-left: 0;  /* content stays put */
+                    margin-left: 0;
                 }
             }
         </style>
@@ -151,7 +148,7 @@
 
         <button type="button" id="nav-toggle">☰</button>
         <button type="button" id="home-button" onclick="window.location.href='./index.html'" title="Home">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
             </svg>
         </button>
