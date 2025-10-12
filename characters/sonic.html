@@ -114,11 +114,16 @@
             .spoiler-text.revealed {
                 filter: blur(0);
             }
+
+            #spoiler-btn:hover {
+                transform: scale(1.1);
+                transition: transform 0.2s;
+            }
         </style>
     </head>
 
     <body>
-        <button type="button" id="spoiler-button">Toggle Spoilers</button>
+        <img id="spoiler-button" src="assets/images/sys/spoiler-checked.png" alt="Spoiler Toggle">
 
         <img id="character-image" src="assets/images/sonc.jpg" title="Placeholder DK!Sonic Image">
         <p> DISCLAIMER: This image is a placeholder. <br><br> </p>
