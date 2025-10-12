@@ -146,7 +146,12 @@
                 position: fixed;
                 z-index: 9999;
             }
-            
+
+            /* ===== Black Bar ===== */
+            #mobile-bar {
+                display: none;
+            }
+
             /* ===== Mobile Responsiveness ===== */
             @media (max-width: 768px) {
                 #mobile-bar {
@@ -164,12 +169,10 @@
                     z-index: 1100;
                 }
 
-                /* Make sure main content isn’t covered */
                 body {
                     padding-top: 60px;
                 }
 
-                /* Inside the bar — don’t fix individually */
                 #back-button, #spoiler-button {
                     position: static;
                     z-index: auto;
@@ -189,12 +192,6 @@
                     cursor: pointer;
                 }
             }
-
-            /* ===== Black Bar ===== */
-            #mobile-bar {
-                display: none;
-            }
-
         </style>
     </head>
     <body>
