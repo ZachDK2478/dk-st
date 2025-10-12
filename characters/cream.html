@@ -126,11 +126,25 @@
                 transform: scale(1.1);
                 transition: transform 0.2s;
             }
+
+            /* ===== Back Button ===== */
+            #back-button {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 1100;
+                color: white;
+                border: none;
+                font-size: 2rem;
+                cursor: pointer;
+                padding: 5px 10px;
+            }
         </style>
     </head>
     <body>
 
         <img id="spoiler-button" src="assets/images/sys/spoiler-checked.png" alt="Spoiler Toggle">
+        <button type="button" id="back-button">←</button>
 
         <img id="character-image" src="assets/images/cream-dreamteam_render.png" title="Placeholder DK!Cream Image">
         <p> DISCLAIMER: This image is a placeholder. <br><br> </p>
