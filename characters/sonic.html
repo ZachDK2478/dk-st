@@ -7,11 +7,13 @@
         <title> Sonic the Hedgehog </title>
 
         <style>
+            /* ===== @ Rules ===== */
             @font-face {
                 font-family: "determination";
                 src: url('../assets/fonts/determination.otf') format('opentype');
             }
 
+            /* ===== Class Styles ===== */
             .image-container {
                 display: flex;
             }
@@ -21,6 +23,7 @@
                 letter-spacing: 1.2px;
             }
 
+            /* ===== Type Selectors ===== */
             body {
                 text-align: center;
                 background-color: black;
@@ -44,6 +47,7 @@
                 margin: 0 auto; /* Still a bit confusing, but this should help center? */
             }
 
+            /* ===== Link Styles ===== */
             a {
                 text-decoration: none;
             }
@@ -78,6 +82,7 @@
                 text-shadow: 0px 0px 5px red;
             }
 
+            /* ===== Character Images ===== */
             #character-image {
                 display: block;
                 margin: auto;
@@ -86,10 +91,35 @@
                 max-height: 400px;
                 padding: 15px 0;
             }
+
+            /* ===== Spoiler Styles ===== */
+            #spoiler-button {
+                position: fixed;
+                top: 1rem;
+                right: 1rem;
+                padding: 8px 16px;
+                background: #ffcc00;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                z-index: 9999;
+            }
+
+            .spoiler-text {
+                filter: blur(6px);
+                transition: filter 0.3s;
+            }
+
+            .spoiler-text.revealed {
+                filter: blur(0);
+            }
         </style>
     </head>
 
     <body>
+        <button type="button" id="spoiler-button">Toggle Spoilers</button>
+
         <img id="character-image" src="assets/images/sonc.jpg" title="Placeholder DK!Sonic Image">
         <p> DISCLAIMER: This image is a placeholder. <br><br> </p>
         
@@ -130,10 +160,10 @@
             <a class="link-classie" href="../characters/class-e.html">Classie</a> have taught him that trusting an entity with a large amount of 
             DETERMINATION isn't exactly the best idea — and he isn't exactly wrong for this, either. 
             <br><br>
-            In order to properly track timeline RESETs, Sonic has even put a small amount of his 
+            <span class="spoiler-text">In order to properly track timeline RESETs, Sonic has even put a small amount of his 
             extracted DETERMINATION into a machine in his secret lab to track data on RESETs. This has allowed him to properly 
             catalogue all of the possible data there could be about a timeline, from the people living in it to the person who 
-            RESET it, to even the events that took place. 
+            RESET it, to even the events that took place. </span>
             <br><br>
         </p>
 
@@ -155,6 +185,8 @@
             studied science. This is what led him to discovering DETERMINATION.
             <br><br><br><br><br>
         </p>
+
+        <script src="../assets/javascript/spoiler-togglescript.js"></script>
 
     </body>
 </html>
