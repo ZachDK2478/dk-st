@@ -143,26 +143,52 @@
 
             /* ===== Mobile Responsiveness ===== */
             @media (max-width: 768px) {
+                #mobile-bar {
+                    display: flex;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 60px;
+                    background-color: black;
+                    color: white;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 15px;
+                    z-index: 1000;
+                }
+
                 body {
-                    padding-top: 80px; /* makes space for top buttons */
+                    padding-top: 60px;
                 }
 
                 #back-button {
-                    top: 10px;
-                    left: 10px;
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 1.5rem;
                 }
 
                 #spoiler-button {
-                    top: 10px;
-                    right: 10px;
+                    width: 32px;
+                    height: 32px;
                 }
             }
+
+            /* ===== Black Bar ===== */
+            #mobile-bar {
+                display: none;
+            }
+
+
         </style>
     </head>
     <body>
 
+    <div id="mobile-bar">
+        <button type="button" id="back-button" onclick="window.location.href='../characters.html'">←</button>
         <img id="spoiler-button" src="assets/images/sys/spoiler-checked.png" alt="Spoiler Toggle">
-        <button type="button" onclick="window.location.href='../characters.html'" id="back-button" href="../characters.html">←</button>
+    </div>
 
         <img id="character-image" src="assets/images/cream-dreamteam_render.png" title="Placeholder DK!Cream Image">
         <p> DISCLAIMER: This image is a placeholder. <br><br> </p>
