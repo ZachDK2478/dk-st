@@ -47,7 +47,7 @@
                 font-family: "determination", sans-serif;
                 position: fixed;
                 top: 0;
-                left: 0;
+                left: -250;
                 bottom: 0;
                 height: 100vh;
                 width: 250px;
@@ -58,8 +58,6 @@
 
                 align-items: center;
                 justify-content: center;
-                padding-top: 20px;
-                padding-bottom: 20px;
 
                 overflow-y: auto;
                 overflow-x: hidden;
@@ -67,6 +65,13 @@
 
                 box-sizing: border-box;
                 padding: 20px 0;
+
+                transition: left 0.3s ease;
+                z-index: 1000;
+            }
+
+            nav.active {
+                left: 0;
             }
 
             nav a {
@@ -94,13 +99,37 @@
             }
 
             .content {
+                transition: margin-left 0.3s ease;
+                margin-left: 20px;
+            }
+
+            nav.active ~ .content {
                 margin-left: 200px;
-                padding: 20px;
+            }
+
+            #nav-toggle {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 1100;
+                background: black;
+                color: white;
+                border: none;
+                font-size: 2rem;
+                cursor: pointer;
+                padding: 5px 10px;
+            }
+
+            @media (max-width: 768px) {
+                nav.active ~ .content {
+                    margin-left: 0;  /* content stays put */
+                }
             }
         </style>
     </head>
 
     <body>
+        <button id="nav-toggle">☰</button>
         <div class="content">
             <h1 class="header-glow-SNC"> DK!SONICTALE </h1>
             <p> 
@@ -127,6 +156,15 @@
             <a href="soundtrack.html">Soundtrack</a>
             <a href="wiki.html">Wiki</a>
         </nav>
+
+        <script>
+            const toggleButton = document.getElementById('nav-toggle');
+            const sidebar = document.querySelector('nav');
+
+            toggleButton.addEventListener('click', () => {
+                sidebar.classList.toggle('active');
+            });
+        </script>
     </body>
 </html>
 
