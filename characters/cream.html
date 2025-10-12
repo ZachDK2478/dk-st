@@ -117,16 +117,16 @@
                 filter: blur(6px);
                 transition: filter 0.3s;
             }
-
+            
             .spoiler-text.revealed {
                 filter: blur(0);
             }
-
+            
             #spoiler-btn:hover {
                 transform: scale(1.1);
                 transition: transform 0.2s;
             }
-
+            
             /* ===== Back Button ===== */
             #back-button {
                 position: fixed;
@@ -140,7 +140,13 @@
                 cursor: pointer;
                 padding: 5px 10px;
             }
-
+            
+            /* ===== Desktop defaults ===== */
+            #back-button, #spoiler-button {
+                position: fixed;
+                z-index: 9999;
+            }
+            
             /* ===== Mobile Responsiveness ===== */
             @media (max-width: 768px) {
                 #mobile-bar {
@@ -189,11 +195,6 @@
                 display: none;
             }
 
-            /* ===== Desktop defaults ===== */
-            #back-button, #spoiler-button {
-                position: fixed;
-                z-index: 9999;
-            }
         </style>
     </head>
     <body>
