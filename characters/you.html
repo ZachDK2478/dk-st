@@ -88,11 +88,15 @@
             }
 
             /* ===== Character Images ===== */
-            .character-image {
+            .character-image-container {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            .character-image {
                 margin: auto;
                 width: auto;
                 max-width: 400px;
@@ -217,9 +221,15 @@
 
         <div id="mobile-bar"></div>
 
-        <img class="character-image" src="assets/images/You-Inspiration-GIF-dustin.gif" title="Mirror">
-        <img class="character-image" src="assets/images/You-Inspiration-GIF-dustin-2.gif" title="Mirror">
-        <p> DISCLAIMER: This image is a placeholder. <br><br> </p>
+        <div class="character-image-container">
+            <img class="character-image" src="assets/images/You-Inspiration-GIF-dustin.gif" title="Mirror">
+            <img class="character-image" src="assets/images/You-Inspiration-GIF-dustin-2.gif" title="Mirror">
+        </div>
+        <p> 
+            DISCLAIMER: These images are placeholders. The images shown are that of You's inspiration: The Player from Friday Night 
+            Dustin'.
+            <br><br>
+        </p>
         
         <h1 class="header-glow-YOU"> YOU </h1>
         <p>
