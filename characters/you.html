@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title> YOU </title>
+
+        <style>
+            /* ===== @ Rules ===== */
+            @font-face {
+                font-family: "determination";
+                src: url('../assets/fonts/determination.otf') format('opentype');
+            }
+
+            /* ===== Class Styles ===== */
+            .image-container {
+                display: flex;
+            }
+
+            
+            /* ===== Type Selectors ===== */
+            body {
+                text-align: center;
+                background-color: black;
+            }
+            
+            h1 {
+                font-family: "determination", sans-serif;
+                color: white;
+                font-size: 2.4rem;
+                max-width: 70ch;
+                text-align: center;
+                margin: 1rem auto;
+            }
+            
+            .header-glow-YOU {
+                text-shadow: 0px 0px 20px white;
+                letter-spacing: 1.2px;
+                color: black;
+            }
+
+            p {
+                font-family: "determination", sans-serif;
+                color: white;
+                font-size: 1.8rem;
+                max-width: 70ch;
+                text-align: center;
+                margin: 0 auto; /* Still a bit confusing, but this should help center? */
+            }
+
+            /* ===== Link Styles ===== */
+            a {
+                text-decoration: none;
+            }
+
+            .link-cream {
+                color: #FFE8BA;
+                text-shadow: 0px 0px 5px #FFE8BA;
+            }
+
+            .link-classie {
+                color: #2598FE;
+                text-shadow: 0px 0px 5px #2598FE;
+            }
+
+            .link-shadow {
+                color: red;
+                text-shadow: 0px 0px 5px red;
+            }
+
+            .link-egg {
+                color: red;
+                text-shadow: 0px 0px 5px red;
+            }
+
+            .link-honey {
+                color: #FAED22;
+                text-shadow: 0px 0px 5px #FAED22;
+            }
+
+            .color-GUN {
+                color: red;
+                text-shadow: 0px 0px 5px red;
+            }
+
+            /* ===== Character Images ===== */
+            #character-image {
+                display: block;
+                margin: auto;
+                width: auto;
+                max-width: 400px;
+                max-height: 400px;
+                padding: 15px 0;
+            }
+
+            /* ===== Spoiler Styles ===== */
+            #spoiler-button {
+                position: fixed;
+                top: 1rem;
+                right: 0.3rem;
+                padding: 8px 16px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                z-index: 9999;
+                width: 175px;
+                height: 75px;
+                transition: transform 0.25s;
+            }
+
+            .spoiler-text {
+                filter: blur(6px);
+                transition: filter 0.3s;
+            }
+            
+            .spoiler-text.revealed {
+                filter: blur(0);
+            }
+            
+            #spoiler-button:hover {
+                transform: scale(1.1);
+            }
+            
+            /* ===== Back Button ===== */
+            #back-button {
+                position: fixed;
+                top: 10px;
+                left: 10px;
+                z-index: 1100;
+                background: black;
+                color: white;
+                border: none;
+                font-size: 2rem;
+                cursor: pointer;
+                padding: 5px 10px;
+                transition: transform 0.25s;
+            }
+
+            #back-button:hover {
+                transform: scale(1.1);
+            }
+            
+            /* ===== Desktop defaults ===== */
+            #back-button, #spoiler-button {
+                position: fixed;
+                z-index: 9999;
+            }
+
+            /* ===== Black Bar ===== */
+            #mobile-bar {
+                display: none;
+            }
+
+            /* ===== Mobile Responsiveness ===== */
+            @media (max-width: 768px) {
+                #mobile-bar {
+                    display: flex;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 75px;
+                    background-color: black;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0 15px;
+                    z-index: 1100;
+                }
+
+                body {
+                    padding-top: 60px;
+                }
+
+                #back-button, #spoiler-button {
+                    position: fixed;
+                    z-index: 9999;
+                }
+
+                #back-button {
+                    background: none;
+                    border: none;
+                    color: white;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    top: 10px;
+                    left: 5px;
+                }
+
+                #spoiler-button {
+                    width: 135px;
+                    height: auto;
+                    cursor: pointer;
+                    top: 1px;
+                    right: 10px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <button type="button" id="back-button" onclick="window.location.href='../characters.html'">←</button>
+        <img id="spoiler-button" src="assets/images/sys/spoiler-checked.png" alt="Spoiler Toggle">
+
+        <div id="mobile-bar"></div>
+
+        <img id="character-image" src="assets/images/sonc.jpg" title="Placeholder DK!Sonic Image">
+        <p> DISCLAIMER: This image is a placeholder. <br><br> </p>
+        
+        <h1 class="header-glow-YOU"> YOU </h1>
+        <p>
+            <span class="spoiler-text">
+                You is the collective Determination of all real life humans. In simple terms, You is Our drive to create new 
+                stories. You exists solely to play the game, tell the story, read the story, write the story, and more. It is the 
+                ultimate amalgamation of every aspect of humanity, from the cruel and genocidal to the empathetic and pacifistic.
+            </span>
+            <br><br>
+            Unfinished . . .<br>
+            But that's just the way We like it.
+            <br><br>
+        </p>
+
+        <h1 class="header-glow-YOU"> SHORTER INFO </h1>
+        <p>
+            <span class="spoiler-text">* You is the collective Determination of all real life humans. In simple terms, You is Our drive 
+            to create new stories.</span>
+            <br>
+            <span class="spoiler-text">* You was inspired by The Player in the Friday Night Dustin' 
+            Friday Night Funkin' mod. What's funny is that You is aware of this fact.</span>
+        </p>
+
+        <script src="../assets/javascript/spoiler-togglescript.js"></script>
+
+    </body>
+</html>
