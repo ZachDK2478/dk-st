@@ -3,17 +3,44 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <title> Dr. Eggman </title>
+        <title>Dr. Eggman</title>
 
         <style>
-            /* ===== @ Rules ===== */
+            /* ========= @ Rules ========= */
             @font-face {
                 font-family: "determination";
                 src: url('../assets/fonts/determination.otf') format('opentype');
             }
 
-            /* ===== Class Styles ===== */
+            /* ========= Type Selectors ========= */
+            body {
+                text-align: center;
+                background-color: black;
+            }
+
+            h1 {
+                font-family: "determination", sans-serif;
+                color: white;
+                font-size: 2.4rem;
+                max-width: 70ch;
+                text-align: center;
+                margin: 1rem auto;
+            }
+
+            p {
+                font-family: "determination", sans-serif;
+                color: white;
+                font-size: 1.8rem;
+                max-width: 70ch;
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            /* ========= Class Styles ========= */
             .image-container {
                 display: flex;
             }
@@ -35,21 +62,6 @@
                 margin-top: 5px;
             }
 
-            /* ===== Type Selectors ===== */
-            body {
-                text-align: center;
-                background-color: black;
-            }
-            
-            h1 {
-                font-family: "determination", sans-serif;
-                color: white;
-                font-size: 2.4rem;
-                max-width: 70ch;
-                text-align: center;
-                margin: 1rem auto;
-            }
-            
             .header-glow-EGG {
                 color: white;
                 text-shadow: 0px 0px 10px red;
@@ -65,20 +77,7 @@
                 color: red;
             }
 
-            p {
-                font-family: "determination", sans-serif;
-                color: white;
-                font-size: 1.8rem;
-                max-width: 70ch;
-                text-align: center;
-                margin: 0 auto;
-            }
-
-            /* ===== Link Styles ===== */
-            a {
-                text-decoration: none;
-            }
-
+            /* ========= Link Styles ========= */
             .link-cream {
                 color: #FFE8BA;
                 text-shadow: 0px 0px 5px #FFE8BA;
@@ -89,12 +88,9 @@
                 text-shadow: 0px 0px 5px #2598FE;
             }
 
-            .link-shadow {
-                color: red;
-                text-shadow: 0px 0px 5px red;
-            }
-
-            .link-egg {
+            .link-shadow,
+            .link-egg,
+            .color-GUN {
                 color: red;
                 text-shadow: 0px 0px 5px red;
             }
@@ -104,12 +100,7 @@
                 text-shadow: 0px 0px 5px #FAED22;
             }
 
-            .color-GUN {
-                color: red;
-                text-shadow: 0px 0px 5px red;
-            }
-
-            /* ===== Character Images ===== */
+            /* ========= Character Images ========= */
             .character-image-container {
                 display: flex;
                 justify-content: center;
@@ -126,7 +117,7 @@
                 padding: 15px 0;
             }
 
-            /* ===== Spoiler Styles ===== */
+            /* ========= Spoiler Styles ========= */
             #spoiler-button {
                 position: fixed;
                 top: 1rem;
@@ -146,16 +137,16 @@
                 filter: blur(6px);
                 transition: filter 0.3s;
             }
-            
+
             .spoiler-text.revealed {
                 filter: blur(0);
             }
-            
+
             #spoiler-button:hover {
                 transform: scale(1.1);
             }
-            
-            /* ===== Back Button ===== */
+
+            /* ========= Back Button ========= */
             #back-button {
                 position: fixed;
                 top: 10px;
@@ -173,19 +164,19 @@
             #back-button:hover {
                 transform: scale(1.1);
             }
-            
-            /* ===== Desktop defaults ===== */
+
+            /* ========= Desktop defaults ========= */
             #back-button, #spoiler-button {
                 position: fixed;
                 z-index: 9999;
             }
 
-            /* ===== Black Bar ===== */
+            /* ========= Black Bar ========= */
             #mobile-bar {
                 display: none;
             }
 
-            /* ===== Mobile Responsiveness ===== */
+            /* ========= Mobile Responsiveness ========= */
             @media (max-width: 768px) {
                 #mobile-bar {
                     display: flex;
@@ -203,11 +194,6 @@
 
                 body {
                     padding-top: 60px;
-                }
-
-                #back-button, #spoiler-button {
-                    position: fixed;
-                    z-index: 9999;
                 }
 
                 #back-button {
@@ -232,12 +218,12 @@
     </head>
 
     <body>
-
+        <!-- ========= Navigation & Spoiler ========= -->
         <button type="button" id="back-button" onclick="window.location.href='../characters.html'">←</button>
         <img id="spoiler-button" src="assets/images/sys/spoiler-checked.png" alt="Spoiler Toggle">
-
         <div id="mobile-bar"></div>
 
+        <!-- ========= Character Image ========= -->
         <div class="character-image-container">
             <img class="character-image" src="assets/images/egg.png" title="Placeholder DK!Egg Image">
         </div>
@@ -245,8 +231,9 @@
             DISCLAIMER: This image is a placeholder.
             <br><br>
         </p>
-        
-        <h1 class="header-glow-EGG"> DR. IVO "EGGMAN" ROBOTNIK </h1>
+
+        <!-- ========= Main Info ========= -->
+        <h1 class="header-glow-EGG">DR. IVO "EGGMAN" ROBOTNIK</h1>
         <p>
             Dr. Eggman is this AU's closest parallel to Alphys. He is one of the most unique cases within this story.
             <br><br>
@@ -254,33 +241,32 @@
             <br><br><br><br>
         </p>
 
-        <h1 class="header-glow-EGG"> SHORTER INFO </h1>
+        <!-- ========= Shorter Info ========= -->
+        <h1 class="header-glow-EGG">SHORTER INFO</h1>
         <div class="shorter-info-big-container">
-            <p>
-                * Dr. Eggman is a 62 year old male human.
+            <p>* Dr. Eggman is a 62 year old male human.</p>
             <div class="shorter-info-container">
                 * He studied to get a teaching degree when he was in college.
             </div>
-                * Eggman retired from villainy as a result of being stranded in the UNDERGROUND. He and Sonic have made a truce.
+            <p>* Eggman retired from villainy as a result of being stranded in the UNDERGROUND. He and Sonic have made a truce.</p>
             <div class="shorter-info-container">
-                <span class="spoiler-text">* As a result of their truce, Eggman has used his previous experience in studying for a 
-                    teaching degree to teach Sonic science, robotics, engineering, and more. As a result, the two have begun to bond quite 
-                    a bit in recent times.
+                <span class="spoiler-text">
+                    * As a result of their truce, Eggman has used his previous experience in studying for a teaching degree to teach Sonic science, robotics, engineering, and more. As a result, the two have begun to bond quite a bit in recent times.
                 </span>
             </div>
             <div class="shorter-info-container">
-                <span class="spoiler-text">* Eggman deeply regrets creating 
-                    <a class="link-classie" href="../characters/class-e.html">Class "E" (Classie).</a> Unfortunately, he can't 
-                        take back a mistake this horrible.</span>
+                <span class="spoiler-text">
+                    * Eggman deeply regrets creating 
+                    <a class="link-classie" href="../characters/class-e.html">Class "E" (Classie)</a>. Unfortunately, he can't take back a mistake this horrible.
+                </span>
             </div>
             <div class="shorter-info-container">
-                <span class="spoiler-text">* Eggman's ego has been deeply bruised from being stranded in the UNDERGROUND.</span>
+                <span class="spoiler-text">
+                    * Eggman's ego has been deeply bruised from being stranded in the UNDERGROUND.
+                </span>
             </div>
-                <br><br><br><br>
-            </p>
         </div>
 
         <script src="../assets/javascript/spoiler-togglescript.js"></script>
-
     </body>
 </html>
