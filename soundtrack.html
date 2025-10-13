@@ -67,13 +67,12 @@
 
         <style>
             .music-player {
-                top: 25px;
                 background-color: black;
                 color: white;
                 border: 5px solid white;
                 padding: 15px;
                 max-width: 400px;
-                margin: 20px auto;
+                margin: 1.5rem auto;
                 text-align: center;
                 box-shadow: 0 0 15px white;
             }
@@ -95,17 +94,80 @@
             }
         </style>
 
+        <style>
+            .controls {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 12px;
+                margin-top: 15px;
+            }
+
+            .control-btn {
+                font-family: "determination", sans-serif;
+                font-size: 1.3rem;
+                background: black;
+                color: white;
+                border: 2px solid white;
+                border-radius: 6px;
+                padding: 8px 14px;
+                cursor: pointer;
+                text-shadow: 0 0 6px white;
+                transition: 0.2s;
+            }
+
+            .control-btn:hover {
+                box-shadow: 0 0 10px white;
+                color: white;
+                border-color: white;
+            }
+
+            #seek-bar {
+                width: 150px;
+                accent-color: blue;
+            }
+
+            #time {
+                font-family: monospace;
+                font-size: 0.9rem;
+                color: #bbb;
+            }
+
+            .hidden-label {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+        </style>
+
     </head>
 
     <body>
         <div class="music-player">
-            <audio id="dkst-track" controls>
+            <audio id="dkst-track">
                 <source src="music/track1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
+                Your browser does not support the audio element.
             </audio>
+
+            <div class="controls">
+                <button type="button" id="play-pause" class="control-btn">▶</button>
+                <label for="seek-bar" class="hidden-label">Seek Bar</label>
+                <input id="seek-bar" type="range" value="0" min="0" max="100">
+                <span id="time">0:00 / 0:00</span>
+                <button id="mute" class="control-btn">🔊</button>
+            </div>
+
             <div class="track-info">
                 <p class="track-title">Track Name Here</p>
                 <p class="track-desc">Optional track description talking about the track.</p>
             </div>
         </div>
+
+        <script src="assets/javascript/player-controls.js"></script>
     </body>
