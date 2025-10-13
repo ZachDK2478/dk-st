@@ -50,14 +50,14 @@
 
             /* Title + Desc */
             .track-title {
-                font-size: 1.6rem;
+                font-size: 2rem;
                 color: white;
                 text-shadow: 0 0 5px white;
                 margin-bottom: 0.3rem;
             }
 
             .track-desc {
-                font-size: 1rem;
+                font-size: 1.5rem;
                 color: #aaa;
                 margin-bottom: 1rem;
             }
@@ -114,7 +114,26 @@
             <div class="controls">
                 <button type="button" class="control-btn play">▶</button>
                 <input type="range" class="seek-bar" value="0" min="0" max="100" title="seek-bar">
-                <span class="time">0:00 / 0:00</span>
+                <span class="time">0:00 / 1:28</span>
+                <button type="button" class="control-btn mute">🔊</button>
+            </div>
+        </div>
+
+        <!-- TRACK 2 -->
+        <div class="track-card">
+            <div class="track-title">002 — Waking Up</div>
+            <div class="track-desc">This song plays as Cream wakes up.</div>
+
+            <audio class="track-audio">
+                <source src="music/mp3/mus_goodmorning.mp3" type="audio/mpeg">
+                <source src="music/flac/mus_goodmorning.flac" type="audio/flac">
+                Your browser does not support the audio element.
+            </audio>
+
+            <div class="controls">
+                <button type="button" class="control-btn play">▶</button>
+                <input type="range" class="seek-bar" value="0" min="0" max="100" title="seek-bar">
+                <span class="time">0:00 / 1:28</span>
                 <button type="button" class="control-btn mute">🔊</button>
             </div>
         </div>
