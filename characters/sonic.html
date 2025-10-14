@@ -199,6 +199,13 @@
 
     <body>
 
+        <audio autoplay loop id="quills">
+            <source src="../music/flac/mus_quills.flac" type="audio/flac">
+            <source src="../music/wav/mus_quills.wav" type="audio/wav">
+            <source src="../music/mp3/mus_quills.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+        </audio>
+
         <button type="button" id="back-button" onclick="window.location.href='../characters.html'">←</button>
         <img id="spoiler-button" src="assets/images/sys/spoiler-checked.png" alt="Spoiler Toggle">
 
@@ -272,6 +279,11 @@
         </p>
 
         <script src="../assets/javascript/spoiler-togglescript.js"></script>
+
+        <script>
+            var audio = document.getElementById("quills");
+            audio.volume = 0.8;
+        </script>
 
     </body>
 </html>
