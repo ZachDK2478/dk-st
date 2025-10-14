@@ -5,8 +5,8 @@ button.addEventListener('click', () => {
   isChecked = !isChecked;
 
   button.src = isChecked
-    ? 'assets/images/sys/spoiler-checked.png'
-    : 'assets/images/sys/spoiler-unchecked.png';
+    ? 'assets/images/sys/spoiler-unchecked.png'
+    : 'assets/images/sys/spoiler-checked.png';
 
   const spoilers = document.querySelectorAll('.spoiler-text');
   spoilers.forEach(el => {
